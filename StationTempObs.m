@@ -5,6 +5,9 @@
 % Everywhere you see "% -->" is a place where you will need to write in
 % your own line of code to accomplish the next task.
 
+%% 0. Add data to the path in MATLAB
+addpath('ObsData')
+
 %% 1a. Read in the file for your station as a data table
 filename = '702610.csv'; %change this to select a different station
 stationdata = readtable(filename);
