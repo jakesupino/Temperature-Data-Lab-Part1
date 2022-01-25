@@ -1,4 +1,4 @@
-%% Add your names in a comment here at the beginning of the code!
+%% Jake and Andrew Earth-Wind-and-Forams
 
 % Instructions: Follow through this code step by step, while also referring
 % to the overall instructions and questions from the lab assignment sheet.
@@ -9,7 +9,7 @@
 addpath('ObsData')
 
 %% 1a. Read in the file for your station as a data table
-filename = '702610.csv'; %change this to select a different station
+filename = '936150.csv';
 stationdata = readtable(filename);
 
 %% 1b-c. Investigate the data you are working with
@@ -22,15 +22,17 @@ stationdata = readtable(filename);
 %You should also be able to see the latitude and longitude of the original
 %station in the csv file. Add these below:
 
-%stationlat = ; %uncomment to run this line of code after adding the station latitude
-%stationlon = ; %uncomment to run this line of code after adding the station longitude
+stationlat = ; -42.72
+stationlon = ; 170.98
 
 %% 2. Plot the data from a single month
 % Make a plot for all data from January with year on the x-axis and
 % temperature on the y-axis. You will want this plot to have individual
 % point markers rather than a line connecting each data point.
 
-% --> 
+year=datafile(:,3)
+Jan=datafile(:,4)
+plot(year,Jan,".")
 
 % Calculate the monthly mean, minimum, maximum, and standard deviation
 % note: some of these values will come out as NaN is you use the regular
